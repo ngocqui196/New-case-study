@@ -3,13 +3,29 @@ ul {
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #333;
+      background-color: #4787ed;
 }
 
 li {
       float: left;
       border-right:1px solid #bbb;
 }
+
+
+button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: aquamarine;
+      padding-top: 1px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+}
+
 
 li:last-child {
       border-right: none;

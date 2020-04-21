@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
 <center>
-        <fieldset style="width: 400px">
-            <img src="image/login_logo.jpeg" style="width: 800px; height: 300px" alt="logo_login">
+        <fieldset style="width: 400px; background-color: lightsalmon ">
+            <img src="image/Welcome.jpg" style="width: 800px; height: 550px" alt="logo_login">
             <br>
             <label for="username">Username:</label><input style="width: 200px; height: 25px; border-radius: 10px " type="text" id="username" placeholder="Tên đăng nhập"><br>
             <br>
             <label for="password">Password:</label><input style="width: 200px; height: 25px; border-radius: 10px" type="password" id="password" placeholder="Mật khẩu"><br>
             <br>
-            <input style="width: 100px; height: 50px" value="Login" type="button" onclick="log.login()"><br>
+            <button class="button button1" style="width: 150px; height: 38px; border-radius: 30px; margin-left: 70px " onclick="log.login()">Login</button>
+            <br>
         </fieldset>
 </center>
 

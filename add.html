@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add Student</title>
+    <title>Add product</title>
     <style>
         input{
             float: left;
@@ -14,52 +14,53 @@
 <body>
 <div>
     <center>
-        <img src="image/fruit-logo.jpg" width="1200" , height="675">
+        <img src="image/immm.jpg" width="1500" , height="340">
         <hr>
     </center>
     <div>
         <ul>
-            <li><a class="active" href="add.html">Home</a></li>
-            <li><a href=add.html>Student Management</a></li>
-            <li><a href="help.html">Help</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="add.html">Add product</a></li>
+            <li><a href="vegatable.html">Vegetable</a></li>
+            <li><a href="fruit.html">Fruit</a></li>
+            <li style="float:right"><a href="login.html">Login</a></li>
         </ul>
     </div>
 </div>
 <div>
     <div style="float: left; width: 400px">
-        <h2>Add Student</h2>
+        <h2>Add fruit</h2>
         <form>
             <fieldset style="width: 330px">
                 <legend>Add Fruit</legend>
                 <label>ID: </label><br>
-                <input type="text" id="fruitId" name="fruit id" placeholder="Please Enter the Fruit ID"><br>
+                <input style="border-radius: 20px" type="text" id="fruitId" name="fruit id" placeholder="Please Enter the Fruit ID"><br>
                 <hr>
                 <label>Name: </label><br>
-                <input type="text" id="fruitName" name="fruit name" placeholder="Please Enter Fruit Name"><br>
+                <input style="border-radius: 20px" type="text" id="fruitName" name="fruit name" placeholder="Please Enter Fruit Name"><br>
                 <hr>
                 <label>Price: </label><br>
-                <input type="text" id="fruitPrice" name="fruit price" placeholder="Please Enter Fruit price"><br>
+                <input style="border-radius: 20px" type="text" id="fruitPrice" name="fruit price" placeholder="Please Enter Fruit price"><br>
                 <hr>
                 <label>Source: </label><br>
-                <input type="text" id="fruitSource" name="fruit source" placeholder="Please Enter Fruit Source"><br>
+                <input style="border-radius: 20px" type="text" id="fruitSource" name="fruit source" placeholder="Please Enter Fruit Source"><br>
                 <hr>
-                <div style="height: 50px">
-                    <label>Select image to upload:</label><br>
-                    <input type="File" name="fileToUpload" id="fruitImage" style="float: left; width: 300px">
-                </div>
+
+                <label>Image: </label><br>
+                <input style="border-radius: 20px" type="text" id="fruitImage" name="fruit image" placeholder="Please Enter Fruit Image"><br>
+                <hr>
                 <hr>
                 <center>
-                    <button id="btnAdd" type="button" value="Add" onclick="addFruit()">submit</button>
+                    <button style="border-radius: 20px; height: 30px; width: 100px " id="btnAdd" type="button" value="Add" onclick="addFruit()">submit</button>
                 </center>
             </fieldset>
         </form>
     </div>
     <div style="float: left; width: 900px">
-        <h2>Display all Student</h2>
+        <h2>Display all fruit</h2>
         <table border="1px" style="width: 900px"  id="pageMStudent">
             <thead>
-            <tr>
-                <th>No</th>
+            <tr style="background-color: lightsalmon; border: darkblue">
                 <th>Fruit ID</th>
                 <th width="150px"> Name</th>
                 <th width="200px">Price </th>
