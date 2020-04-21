@@ -40,5 +40,5 @@ function creatNewFruit() {
     showListFruit();
 }
 function showListFruit() {
-    let data = "<can"
+    let data
 }
