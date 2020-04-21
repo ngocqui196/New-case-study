@@ -10,7 +10,7 @@
 <body>
 <div>
     <center>
-        <img src="maxresdefault.jpg" height="180" width="1280"/>
+        <img src="Image/maxresdefault.jpg" height="180" width="1280"/>
         <hr>
     </center>
     <div>
@@ -21,21 +21,30 @@
     </div>
 </div>
 <div>
+    <div>
     <h1>Thêm sản phẩm</h1>
-    <form id="creatFruit"  >
+    <form id="creatFruit"  style="height: 300px; width: 300px" >
         <h3>Nhập tên sản phẩm</h3>
         <p> Tên sản phẩm: <input id="name" type="text" ></p>
         <p>Xuất xứ :<input id="source" type="text" ></p>
         <p>Giá sản phẩm: <input id="value" type="text"></p>
+        <p>Thêm hình ảnh:</p>
+        <input type="File" name="fileToUpload" id="img" style="float: left; width: 300px">
+
          <button id="info" onclick="creatNewFruit()">Thêm</button>
     </form><br>
-    <div id="listFruit">
-        <h2>Danh sách sản phẩm</h2>
     </div>
+
+        <h2>Danh sách sản phẩm</h2>
+        <div id="listFruit" style="border: solid 1px; width: 1280px; height: 150px">
+            <div id="image" style="border: solid 1px; width: 150px; height: 130px; margin-top: 10px; margin-left: 10px" ></div>
+            <tbody id="main">
+
+            </tbody>
+
+        </div>
+
 </div>
-
-
-
-<script src="js.js"></script>
+<script src="java.js"></script>
 </body>
 </html>
