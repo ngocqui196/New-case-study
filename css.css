@@ -1,7 +1,18 @@
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+}
+li {
+      float: left;
+      border-right:1px solid #bbb;
+}
 form {
       border: solid 1px;
       width: 300px;
-      height: 220px;
+      height: 200px;
 }
 h3 {
 
@@ -17,8 +28,8 @@ button {
       height: 30px;
       margin-left: 80px;
 }
-div {
-      border: solid 1px;
-      width: 300px;
-      height: 200px;
-}
+/*div {*/
+/*      border: solid 1px;*/
+/*      width: 300px;*/
+/*      height: 200px;*/
+/*}*/
