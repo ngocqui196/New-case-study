@@ -30,28 +30,29 @@
 <div>
     <div style="float: left; width: 400px">
         <h2>Add fruit</h2>
-        <form>
+        <form name="product">
             <fieldset style="width: 330px">
                 <legend>Add Fruit</legend>
                 <label>ID: </label><br>
-                <input style="border-radius: 20px" type="text" id="fruitId" name="fruit id" placeholder="Please Enter the Fruit ID"><br>
+                <input style="border-radius: 20px" type="text" id="fruitId" name="fruitId" placeholder="Please Enter the Fruit ID"><br>
                 <hr>
                 <label>Name: </label><br>
-                <input style="border-radius: 20px" type="text" id="fruitName" name="fruit name" placeholder="Please Enter Fruit Name"><br>
+                <input style="border-radius: 20px" type="text" id="fruitName" name="fruitName" placeholder="Please Enter Fruit Name"><br>
                 <hr>
                 <label>Price: </label><br>
-                <input style="border-radius: 20px" type="text" id="fruitPrice" name="fruit price" placeholder="Please Enter Fruit price"><br>
+                <input style="border-radius: 20px" type="text" id="fruitPrice" name="fruitPrice" placeholder="Please Enter Fruit price"><br>
                 <hr>
                 <label>Source: </label><br>
-                <input style="border-radius: 20px" type="text" id="fruitSource" name="fruit source" placeholder="Please Enter Fruit Source"><br>
+                <input style="border-radius: 20px" type="text" id="fruitSource" name="fruitSource" placeholder="Please Enter Fruit Source"><br>
                 <hr>
 
                 <label>Image: </label><br>
-                <input style="border-radius: 20px" type="text" id="fruitImage" name="fruit image" placeholder="Please Enter Fruit Image"><br>
+                <input style="border-radius: 20px" type="text" id="fruitImage" name="fruitImage" placeholder="Please Enter Fruit Image"><br>
                 <hr>
                 <hr>
                 <center>
-                    <button style="border-radius: 20px; height: 30px; width: 100px " id="btnAdd" type="button" value="Add" onclick="addFruit()">submit</button>
+                    <button style="border-radius: 100px; height: 30px; width: 100px " id="btnAdd" type="button" value="Add" onclick="addFruit()">submit</button>
+                    <button style="width: 100px; height: 30px" id="btnEdit" type="button" value="Add" onclick="saveFruit()">Lưu Lại</button>
                 </center>
             </fieldset>
         </form>
