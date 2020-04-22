@@ -101,13 +101,12 @@ function loadFullScreen() {
     row = "";
     for (let i = 0; i < fruitList.length; i++) {
         row += "<tr><td>" + fruitList[i].getId() + "</td><td>" + fruitList[i].getName()
-            + "</td><td>" + fruitList[i].getPrice() + "</td><td>" + fruitList[i].getSource()
+            + "</td><td>" + fruitList[i].getPrice() + " đ/kg" + "</td><td>" + fruitList[i].getSource()
             + "</td><td><center><img height='200px' src="+fruitList[i].getImage()+"></center> </td>"
-            + "<td><center><button id='btnEdit' onclick='edit(" + i + ")'>Edit</button></center></td>"
-            + "<td><center><button  onclick=' fruitDelete(" + i + ")'>Delete</button></center></td></tr>";
-        document.getElementById("detailList").innerHTML = row;
+            + "<td><center><button onclick='edit(" + i + ")'>Edit</button></center></td>"
+            + "<td><center><button onclick=' fruitDelete(" + i + ")'>Delete</button></center></td></tr>";
     }
-
+    document.getElementById("detailList").innerHTML = row;
 }
 let ret;
 function edit(index) {
@@ -161,7 +160,7 @@ function fruitDelete(index) {
     let del = confirm("Bạn chắc chắn muốn xóa sản phẩm ko?");
     console.log(index);
     if (del) {
-        fruitList.splice(index, 1);
+        fruitList.splice(index,1);
 
         document.getElementById("fruitId").value='';
         document.getElementById("fruitName").value='';
