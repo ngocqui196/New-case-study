@@ -77,14 +77,21 @@ function addFruit() {
     let fruitPrice = document.getElementById("fruitPrice").value;
     let fruitSource = document.getElementById("fruitSource").value;
     let fruitImage = document.getElementById("fruitImage").value;
-    let fruit1 = new fruit(fruitId, fruitName, fruitPrice, fruitSource, fruitImage);
-    fruitList.push(fruit1);
-     document.getElementById("fruitId").value='';
-     document.getElementById("fruitName").value='';
-     document.getElementById("fruitPrice").value='';
-     document.getElementById("fruitSource").value='';
-     document.getElementById("fruitImage").value='';
-    document.getElementById("fruitId").focus();
+    let createprice=Number(fruitPrice);
+    if (fruitId == ""||fruitName ==""||
+        fruitPrice == ""||fruitSource ==""||fruitImage==''||!createprice){
+        alert("Bạn chưa nhập hoặc đã nhập sai thông tin.");
+    }else {
+        alert("Cập nhật sản phẩm thành công.");
+        let fruit1 = new fruit(fruitId , fruitName , fruitPrice , fruitSource , fruitImage);
+        fruitList.push(fruit1);
+        document.getElementById("fruitId").value = '';
+        document.getElementById("fruitName").value = '';
+        document.getElementById("fruitPrice").value = '';
+        document.getElementById("fruitSource").value = '';
+        document.getElementById("fruitImage").value = '';
+        document.getElementById("fruitId").focus();
+    }
     loadFullScreen(fruitList);
 }
 
@@ -105,8 +112,6 @@ function loadFullScreen() {
 let ret;
 function edit(index) {
     ret = index;
-    document.getElementById("btnEdit").disabled = true;
-    document.getElementById("btnAdd").disabled = false;
 
     document.product.fruitId.value= fruitList[index].getId();
     document.product.fruitName.value= fruitList[index].getName();
@@ -114,9 +119,12 @@ function edit(index) {
     document.product.fruitSource.value= fruitList[index].getSource();
     document.product.fruitImage.value= fruitList[index].getImage();
 
+    document.getElementById("btnEdit").disabled = false;
+    document.getElementById("btnAdd").disabled = true;
 }
 function saveFruit(index) {
     index = ret ;
+    console.log(index)
     // Khai báo các biến có giá trị nhập váo trường ô inputt text cho các biến đó
     let fruitId =document.getElementById("fruitId").value;
     let fruitName =document.getElementById("fruitName").value;
@@ -142,15 +150,27 @@ function saveFruit(index) {
         document.getElementById("fruitSource").value='';
         document.getElementById("fruitImage").value='';
         document.getElementById("fruitId").focus(); // chỏ chuột vào trường nhập thông tin
-    }
 
+        document.getElementById("btnEdit").disabled = true;
+        document.getElementById("btnAdd").disabled = false;
+    }
     loadFullScreen(index);
 }
 
 function fruitDelete(index) {
-    let del = confirm("Bạn chắc chắn muốn xóa " + fruitList[index]);
-    if (del === true) {
+    let del = confirm("Bạn chắc chắn muốn xóa sản phẩm ko?");
+    console.log(index);
+    if (del) {
         fruitList.splice(index, 1);
+
+        document.getElementById("fruitId").value='';
+        document.getElementById("fruitName").value='';
+        document.getElementById("fruitPrice").value='';
+        document.getElementById("fruitSource").value='';
+        document.getElementById("fruitImage").value='';
+
+        document.getElementById("btnEdit").disabled = true;
+        document.getElementById("btnAdd").disabled = false;
     }
     loadFullScreen();
 }
